@@ -7,8 +7,8 @@ test('Navigate to CRM/SFA without login page', async ({ page }) => {
   // Verify the login page is NOT shown
   await expect(page.getByRole('textbox', { name: 'Username' })).not.toBeVisible();
 
-  // Click on CRM/SFA link
-  await page.getByRole('link', { name: 'CRM/SFA' }).click();
+//click on CRM/SFA
+await page.getByRole('link', {name: 'CRM/SFA'}).click()
 
   // Validate navigation to CRM/SFA
   await expect(page).toHaveURL(/crmsfa/);
